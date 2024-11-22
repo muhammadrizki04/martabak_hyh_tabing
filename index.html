@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martabak HYH Tabing</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Martabak HYH Tabing</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Selamat Datang di Martabak HYH Tabing</h2>
+        <p>Tempatnya martabak lezat dan nikmat!</p>
+    </section>
+
+    <section id="menu">
+        <h2>Menu Martabak</h2>
+        <div class="menu-item">
+            <img src="images/martabakenak.jpeg" alt="Martabak 1" onclick="openModal('images/martabak1.jpg')">
+            <h3>Martabak Telur tanpa daging</h3>
+            <p>Harga: Rp 30.000</p>
+        </div>
+        <div class="menu-item">
+            <img src="images/martabaktelur.jpeg" alt="Martabak 2" onclick="openModal('images/martabak2.jpg')">
+            <h3>Martabak Telur sayur+daging</h3>
+            <p>Harga: Rp 35.000</p>
+        </div>
+        <!-- Tambahkan lebih banyak item menu -->
+    </section>
+
+    <section id="about">
+        <h2>Tentang Kami</h2>
+        <p>Martabak HYH Tabing menyediakan martabak dengan rasa terbaik di kota Padang</p>
+    </section>
+
+    <section id="contact">
+        <h2>Kontak Kami</h2>
+        <form id="contact-form">
+            <label for="name">Nama</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Kirim Pesan</button>
+        </form>
+
+        <div class="notification" id="contact-notification"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Martabak HYH Tabing | <a href="#home">Kembali ke atas</a></p>
+        <div>
+            <button id="whatsapp-order" onclick="whatsappOrder()">Order via WhatsApp</button>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
